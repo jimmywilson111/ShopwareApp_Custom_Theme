@@ -1,0 +1,38 @@
+{% sw_extends '@Storefront/storefront/layout/header/top-bar.html.twig' %}
+
+    {% block layout_header_top_bar %}
+        <div class="container-fluid">
+            <div class="row main-top ">
+                <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                    <div class="text-slid-box">
+                        <div id="offer-box" class="carouselTicker mt-1">
+                            <ul class="offer-box text-center text-lg-left">
+                                <li>
+                                    <i class="fab fa-opencart"></i> Off 10%! Shop Now Man
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12 d-md-flex justify-content-between justify-content-lg-end align-items-center">
+                    <div class="our-link">
+                        <ul>
+                            <li><a href="{{ frontend.account.home.page }}">My Account</a></li>
+                            <li><a href="#">Our location</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="right-phone-box">
+                        <p>Call US : <a href="telto:+11900800100"> +11 900 800 100</a></p>
+                    </div>
+                    <div class="currency d-none d-lg-block">
+                        {% block layout_header_top_bar_currency %}
+                            {% sw_include '@Storefront/storefront/layout/header/actions/currency-widget.html.twig' %}
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+

@@ -1,0 +1,25 @@
+{
+  "name": "swag/theme-skeleton",
+  "description": "Theme skeleton plugin",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "version": "v1.0.0",
+  "autoload": {
+    "psr-4": {
+      "NewTheme\\": "src/"
+    }
+  },
+  "authors": [
+    {
+        "name": "Custom Theme Developer",
+        "role": "Frontend"
+    }
+  ],
+  "extra": {
+    "shopware-plugin-class": "NewTheme\\NewTheme",
+    "label": {
+      "de-DE": "Theme NewTheme plugin",
+      "en-GB": "Theme NewTheme plugin"
+    }
+  }
+}

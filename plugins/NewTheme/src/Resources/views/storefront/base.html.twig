@@ -1,0 +1,26 @@
+{% sw_extends '@Storefront/storefront/base.html.twig' %}
+
+{% block base_header %}
+    <header class="header-main">
+        {% block base_header_inner %}
+            {% sw_include '@Storefront/storefront/layout/header/header.html.twig' %}
+        {% endblock %}
+    </header>
+    <div class="container">
+        {% sw_include '@Storefront/storefront/layout/header/search.html.twig' %}
+    </div>
+{% endblock %}
+
+{% block base_navigation %}
+
+{% endblock %}
+
+{% block base_footer %}
+    <footer class="footer-main">
+        {% block base_footer_inner %}
+            <div class="container-fluid footer-content">
+                {% sw_include '@Storefront/storefront/layout/footer/footer.html.twig' %}
+            </div>
+        {% endblock %}
+    </footer>
+{% endblock %}
