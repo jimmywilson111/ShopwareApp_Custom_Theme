@@ -1,0 +1,53 @@
+.breadcrumb {
+    margin: 0 0 1em 0;
+}
+.product-breadcrumb {
+    padding: 3em 0;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background: url( $mypluginBundlePath + 'img/all-bg-title.jpg') no-repeat center center;
+    &:before {
+        background: rgba(0,0,0,0.6);
+        content: '';
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+
+    }
+    .page-title {
+        display: flex;
+        flex: 1 1 100%;
+        color: $color-white;
+        justify-content: center;
+        z-index: 10;
+        padding-bottom: 30px;
+
+    }
+    .breadcrumb-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #d33b33;
+        padding: 15px 25px;
+        margin: 0 auto;
+        z-index: 10;
+        .breadcrumb-container {
+            a {
+                color: $color-white;
+                font-weight: 600;
+            }
+            .is-active {
+                color: $color-black;
+            }
+            .breadcrumb-placeholder {
+                span {
+                    color: $color-black;
+                }
+            }
+        }
+    }
+}
+

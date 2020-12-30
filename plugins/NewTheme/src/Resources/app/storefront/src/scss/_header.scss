@@ -3,9 +3,15 @@
         background: #010101;
         padding: 10px 0;
         .offer-box {
-            color: #FFF;
+            color: $color-white;
             font-weight: 600;
             padding: 2px 15px;
+            li {
+                i {
+                    margin-right: 5px;
+                    color: $color-red;
+                }
+            }
         }
         .our-link {
             display: flex;
@@ -15,7 +21,7 @@
 
                 li {
                     display: inline-block;
-                    border-right: 1px solid #ffffff;
+                    border-right: 1px solid $color-white;
                     padding: 0 10px;
                     line-height: 10px;
                     font-weight: 600;
@@ -28,7 +34,7 @@
                         text-decoration: $link-decoration;
 
                         &:hover {
-                            color: #d33b33;
+                            color: $color-red;
                         }
                     }
 
@@ -47,17 +53,17 @@
 
             p {
                 line-height: 30px;
-                color: #FFF;
+                color: $color-white;
                 font-weight: 600;
                 font-size: 14px;
 
                 a {
                     text-decoration: $link-decoration;
-                    color: #FFF;
+                    color: $color-white;
                     font-weight: 600;
 
                     &:hover {
-                        color: #d33b33;
+                        color: $color-red;
                     }
                 }
             }
@@ -67,10 +73,10 @@
             float: right;
             padding-left: 20px;
             .currencies-menu {
-                background-color: #d33b33;
+                background-color: $color-red;
 
                 .top-bar-nav-btn {
-                    color: #FFF;
+                    color: $color-white;
                     font-weight: 600;
                     padding: 0 10px;
 
@@ -94,28 +100,31 @@
         }
         .nav-main-toggle-btn {
             border-radius: $border-radius;
-            border: 1px solid #d33b33;
+            border: 1px solid $color-red;
             padding: 0 10px;
             margin-right: 10px;
 
             span {
-                color: #010101;
+                color: $color-black;
             }
         }
         .main-navigation-menu {
+            .main-navigation-link.is-open {
+                color: $color-red;
+            }
+            .main-navigation-link {
+                &:hover {
+                    color: $color-red;
+                }
+
+            }
             .active {
                 .main-navigation-link-text {
                     border: none;
-                    color: #d33b33;
+                    color: $color-red;
                 }
             }
-            a {
-                &:hover {
-                    .main-navigation-link-text {
-                        color: #d33b33;
-                    }
-                }
-            }
+
         }
     }
 
@@ -123,7 +132,7 @@
         .icon {
             color: $color-black;
             &:hover {
-                color: #d33b33;
+                color: $color-red;
             }
         }
     }

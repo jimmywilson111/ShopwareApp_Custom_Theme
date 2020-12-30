@@ -1,0 +1,33 @@
+.gallery-slider {
+    .gallery-slider-controls {
+        .base-slider-controls-prev, .base-slider-controls-next {
+            background-color: $color-black;
+            opacity: 1;
+            width: 30px;
+            .icon {
+                align-items: unset;
+                width: 14px;
+                height: 14px;
+                color: $color-white;
+            }
+        }
+    }
+    .gallery-slider-thumbnails-item {
+        cursor: pointer;
+        height: 100px;
+        width: 100px;
+
+        &.tns-nav-active {
+            .gallery-slider-thumbnails-item-inner {
+                border-color: $color-black;
+            }
+        }
+    }
+    .gallery-slider-thumbnails-item {
+        &.tns-nav-active {
+            .gallery-slider-thumbnails-item-inner {
+                border-color: $color-black;
+            }
+        }
+    }
+}

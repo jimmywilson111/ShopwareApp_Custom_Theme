@@ -1,5 +1,28 @@
 @import "_reset";
 @import "_media";
 @import "_header";
+@import "_breadcrumbs";
 @import "_footer";
+@import "_single-product";
 
+.content {
+    padding: 0;
+}
+.header-search {
+    margin-bottom: 2em;
+    .input-group {
+        &:hover {
+            border-color: $color-red;
+        }
+        &:focus {
+            border-color: $color-red;
+        }
+    }
+    .header-search-btn {
+        &:hover {
+            .icon {
+                color: $color-red;
+            }
+        }
+    }
+}
