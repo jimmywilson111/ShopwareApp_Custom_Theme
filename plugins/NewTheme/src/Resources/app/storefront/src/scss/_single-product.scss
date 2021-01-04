@@ -31,3 +31,119 @@
         }
     }
 }
+.product-detail-buy {
+    overflow: hidden;
+    .product-detail-name {
+        color: $color-black;
+        line-height: 1.2;
+    }
+    .product-detail-ordernumber-container {
+        margin: 0;
+    }
+    .product-detail-price {
+        font-size: 18px;
+        color: $color-red;
+        font-weight: 900;
+    }
+    .form-row {
+        margin: 0;
+    }
+    .product-detail-description-text {
+        margin: 0 0 1rem 0;
+        .product-detail-description-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: $color-black;
+            margin-bottom: 10px;
+        }
+        p {
+            color: $color-gray;
+        }
+    }
+    .product-detail-configurator {
+        .product-detail-configurator-option {
+            margin-bottom: .5em;
+            .product-detail-configurator-option-input {
+                &:checked + .product-detail-configurator-option-label.is-display-text {
+                    background-color: $color-red;
+                    color: $color-black;
+                    font-weight: 600;
+                }
+
+            }
+            .product-detail-configurator-option-label {
+                padding: 8px 0;
+            }
+        }
+    }
+    .product-detail-quantity-input {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        border: 1px dashed $color-black;
+        padding: 10px;
+        span {
+            font-weight: 600;
+        }
+        .input-group-prepend {
+            border-radius: $border-radius;
+            .form-control {
+                display: inline-flex;
+                width: auto;
+            }
+            .increase, .decrease {
+                background-color: $color-red;
+                color: $color-white;
+                &:hover {
+                    color: $color-black;
+                }
+            }
+        }
+    }
+    .btn-buy {
+        margin: 1em 0;
+        @include button
+    }
+    .add-to-btn {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 20px 0;
+        .add-comp {
+            margin-bottom: 1em;
+            .btn {
+                @include button
+            }
+        }
+        .share-bar {
+            .btn {
+                i {
+                    font-size: 18px;
+                }
+                @include button
+            }
+        }
+    }
+}
+.product-detail-cross-selling {
+    margin-bottom: 1rem;
+    .card-tabs {
+        .cross-selling-title {
+            text-align: center;
+            color: $color-black;
+            margin-bottom: .5em;
+        }
+        .cross-selling-description {
+            text-align: center;
+            color: $color-gray;
+        }
+        .product-detail-tabs-content {
+            padding-top: 0;
+        }
+    }
+    .product-slider.has-nav {
+        padding: 0;
+    }
+}

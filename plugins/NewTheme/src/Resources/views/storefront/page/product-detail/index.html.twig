@@ -59,18 +59,81 @@
                                     </div>
                                 {% endblock %}
 
-                                {% block page_product_detail_buy %}
-                                    <div class="col-lg-6 product-detail-buy">
-                                        {% block page_product_detail_name %}
-                                            <h1 class="product-detail-name"
-                                                itemprop="name">
-                                                {{ page.product.translated.name }}
-                                            </h1>
-                                        {% endblock %}
-                                        {{ page.product.translated.description|raw }}
-                                        {{ parent() }}
-                                    </div>
+                                {% block page_product_detail_buy_inner %}
+                                    {% block page_product_detail_buy %}
+                                        <div class="col-lg-6 product-detail-buy js-magnifier-zoom-image-container">
+                                            {% block page_product_detail_name %}
+                                                <h1 class="product-detail-name"
+                                                    itemprop="name">
+                                                    {{ page.product.translated.name }}
+                                                </h1>
+                                            {% endblock %}
+                                            {% block page_product_detail_ordernumber_container %}
+                                                {% if page.product.productNumber %}
+                                                    <div class="product-detail-ordernumber-container">
+                                                        {% block page_product_detail_ordernumber_label %}
+                                                            <span class="product-detail-ordernumber-label">
+                            {{ "detail.productNumberLabel"|trans|sw_sanitize }}
+                        </span>
+                                                        {% endblock %}
+
+                                                        {% block page_product_detail_ordernumber %}
+                                                            <meta itemprop="productID"
+                                                                  content="{{ page.product.id }}"/>
+                                                            <span class="product-detail-ordernumber"
+                                                                  itemprop="sku">
+                            {{ page.product.productNumber }}
+                        </span>
+                                                        {% endblock %}
+                                                    </div>
+                                                {% endif %}
+                                            {% endblock %}
+                                            {% block page_product_detail_price %}
+                                                <div class="product-detail-price-container">
+                                                    {% sw_include '@Storefront/storefront/page/product-detail/buy-widget-price.html.twig' %}
+                                                </div>
+                                            {% endblock %}
+
+                                            <div class="product-detail-description-text">
+                                                <span class="product-detail-description-label">Short description:</span>
+                                                <p>{{ page.product.translated.description|raw }}</p>
+                                            </div>
+
+
+                                            <div class="product-buy">
+                                                {% block page_product_detail_configurator_include %}
+                                                    {% if page.product.parentId and page.configuratorSettings|length > 0 %}
+                                                        <div class="product-detail-configurator-container">
+                                                            {% sw_include '@Storefront/storefront/page/product-detail/configurator.html.twig' %}
+                                                        </div>
+                                                    {% endif %}
+                                                {% endblock %}
+                                                {% sw_include '@Storefront/storefront/page/product-detail/buy-widget-form.html.twig' %}
+                                            </div>
+
+                                            <div class="add-to-btn">
+                                                <div class="add-comp">
+                                                    <a class="btn" href="#"><i class="fas fa-heart"></i> Add to wishlist</a>
+                                                    <a class="btn" href="#"><i class="fas fa-sync-alt"></i> Add to
+                                                        Compare</a>
+                                                </div>
+                                                <div class="share-bar">
+                                                    <a class="btn" href="#"><i class="fab fa-facebook"
+                                                                               aria-hidden="true"></i></a>
+                                                    <a class="btn" href="#"><i class="fab fa-google-plus"
+                                                                               aria-hidden="true"></i></a>
+                                                    <a class="btn" href="#"><i class="fab fa-twitter"
+                                                                               aria-hidden="true"></i></a>
+                                                    <a class="btn" href="#"><i class="fab fa-pinterest-p"
+                                                                               aria-hidden="true"></i></a>
+                                                    <a class="btn" href="#"><i class="fab fa-whatsapp"
+                                                                               aria-hidden="true"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endblock %}
                                 {% endblock %}
+
                             </div>
                         {% endblock %}
                     </div>
