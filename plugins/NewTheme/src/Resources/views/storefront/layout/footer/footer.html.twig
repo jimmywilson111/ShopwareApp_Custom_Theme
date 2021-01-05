@@ -1,12 +1,16 @@
 {% sw_extends '@Storefront/storefront/layout/footer/footer.html.twig' %}
 
 {% block layout_footer_inner_container %}
-    
+
     <div class="subfooter">
         {% block layout_footer_copyright %}
             <div class="footer-copyright">
-                <p class="footer-company">All Rights Reserved. &copy; {{ "now"|date("Y") }} Custom DevShop | Design By : html design</p>
+                {% set nameshop = shopware.config.core.basicInformation.shopName %}
+                <p class="footer-company">All Rights Reserved. &copy; {{ "now"|date("Y") }} <a href="/">{{ nameshop }}</a> | Design By :
+                    <a href="#">html design</a></p>
             </div>
         {% endblock %}
     </div>
 {% endblock %}
+
+

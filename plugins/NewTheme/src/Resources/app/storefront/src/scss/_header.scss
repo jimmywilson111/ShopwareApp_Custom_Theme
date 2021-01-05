@@ -88,6 +88,7 @@
         }
     }
     .header-row {
+        padding: .5rem 0;
         .wrapper {
             align-items: center;
             display: flex;
@@ -125,6 +126,16 @@
                 }
             }
 
+        }
+        .header-cart {
+            .header-cart-badge {
+                right: .75rem;
+                background-color: transparent;
+                color: $color-black;
+            }
+        }
+        .badge {
+            top: 2.5rem;
         }
     }
 

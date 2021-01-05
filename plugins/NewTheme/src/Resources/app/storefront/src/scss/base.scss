@@ -5,10 +5,27 @@
 @import "_breadcrumbs";
 @import "_footer";
 @import "_single-product";
+@import "_about_us";
+
 
 .content {
     padding: 0;
 }
+
+.container-main {
+    padding: 0 0 1.25em 0;
+}
+
+.cms-block-container {
+    padding: 0 10px !important;
+}
+
+.cms-section-default {
+    &.boxed {
+        padding: 0 !important;
+    }
+}
+
 .header-search {
     margin-bottom: 2em;
     .input-group {
@@ -27,3 +44,10 @@
         }
     }
 }
+
+.section-title {
+    font-size: 28px;
+    @include title
+}
+
+
